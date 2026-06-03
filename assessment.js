@@ -47,8 +47,9 @@ assessmentButton.addEventListener(
     tweetDivision.appendChild(script);
   }
 );
+
 userNameInput.addEventListener(
-  'keydown',
+  'keydown', //キー入力
   (event) => {
     if(event.code === 'Enter') {
       assessmentButton.dispatchEvent(new Event('click'))
