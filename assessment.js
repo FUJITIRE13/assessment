@@ -41,13 +41,21 @@ assessmentButton.addEventListener(
     anchor.innerText = 'Tweet #あなたのいいところ';
     
     tweetDivision.appendChild(anchor);
-
     
     const script = document.createElement('script');
     script.setAttribute('src', 'https://platform.twitter.com/widgets.js');
     tweetDivision.appendChild(script);
   }
 );
+userNameInput.addEventListener(
+  'keydown',
+  (event) => {
+    if(event.code === 'Enter') {
+      assessmentButton.dispatchEvent(new Event('click'))
+    }
+  }
+)
+
 
 const answers = [
   '###userName###のいいところは声です。###userName###の特徴的な声は皆を惹きつけ、心に残ります。',
